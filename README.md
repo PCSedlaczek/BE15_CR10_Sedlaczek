@@ -11,20 +11,20 @@ Big Library web application
 - [x] Research Library catalogue data fields
 
 ## MySQL Database 
-- [ ] Create database BE15_CR10_Sedlaczek_BigLibrary
-- [ ] Create one table
-- [ ] columns
-  - [ ] title
-  - [ ] image
-  - [ ] ISBN code
-  - [ ] short_description
-  - [ ] type (book, CD, DVD)
-  - [ ] author_first_name
-  - [ ] author_last_name
-  - [ ] publisher_ name
-  - [ ] publisher_address
-  - [ ] publish_date
-  - [ ] status/availability
+- [x] Create database BE15_CR10_Sedlaczek_BigLibrary
+- [x] Create one table
+- [x] columns
+  - [x] title
+  - [x] image
+  - [x] ISBN code
+  - [x] short_description
+  - [x] type (book, CD, DVD)
+  - [x] author_first_name
+  - [x] author_last_name
+  - [x] publisher_name
+  - [x] publisher_address
+  - [x] publish_date
+  - [x] status/availability
 - [ ] Add test data (at least 10 entries)
 
 ## PHP CRUD
@@ -44,4 +44,4 @@ Big Library web application
 - [ ] Send repository link through LMS
 - [ ] Invite codefactorygit as collaborator
 
-Work time: 1:30 hrs
+Work time: 3:00 hrs
