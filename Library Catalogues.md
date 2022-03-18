@@ -2,6 +2,31 @@
 
 # English
 
+## WorldCat
+- Title
+- Author
+- Publisher
+- Series
+- Edition/Format
+- Summary
+- Rating
+- Subjects
+- More like this/Similar items
+- Genre/Form
+- Material Type
+- Document Type
+- All Authors/Contributors
+- ISBN
+- OCLC Number
+- Notes
+- Description
+- Series Title
+- Other titles
+- Responsibility
+- Abstact
+- Reviews
+- Tags
+
 ## New York Public Library
 - Format
 - Title
@@ -17,9 +42,9 @@
 - Subject
 - Keywords
 - Genre/Form
-- LCCN
-- ISBN
-- Branch Call Number
+- LCCN (Library of Congress Control Number)
+- ISBN (International Standard Book Number)
+- Branch Call No.
 - Available at/Collection
 - Items
 - Location
@@ -33,7 +58,7 @@
 - Publication Details
 - Language
 - Uniform Title
-- Identifier (ISBN/BNB/System number)
+- Identifier (ISBN/BNB (British National Bibliography)/System number)
 - Notes: (Translated from the ..., Also published electronically)
 - Physical Description (pages, illustrations (black and white), size)
 - Shelfmark(s)
@@ -74,7 +99,7 @@
 - Language
 - Local History Reference
 - Subject
-- BRN
+- BRN (?)
 - Bookmark link
 - More information
 
@@ -121,7 +146,7 @@
 - Person/Institution
 - Basisklassifikation
 - Regensburger Verbundklassifikation
-- DDC
+- DDC (Dewey Decimal Classification)
 - Schlagwörter
 - Quelle
 - Permalink
