@@ -9,6 +9,7 @@ Big Library web application
 
 - [x] Brainstorm Library catalogue database categories
 - [x] Research Library catalogue data fields
+- [x] Research Library media data
 
 ## MySQL Database 
 - [x] Create database BE15_CR10_Sedlaczek_BigLibrary
@@ -25,7 +26,7 @@ Big Library web application
   - [x] publisher_address
   - [x] publish_date
   - [x] status/availability
-- [ ] Add test data (at least 10 entries)
+- [x] Add test data (at least 10 entries)
 
 ## PHP CRUD
 - [ ] Fetch & Display List of Media from database
@@ -44,4 +45,4 @@ Big Library web application
 - [ ] Send repository link through LMS
 - [ ] Invite codefactorygit as collaborator
 
-Work time: 3:00 hrs
+Work time: 10:33 hrs
