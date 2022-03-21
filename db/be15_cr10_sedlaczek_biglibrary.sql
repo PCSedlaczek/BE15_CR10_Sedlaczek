@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2022 at 04:15 AM
+-- Generation Time: Mar 21, 2022 at 08:19 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -31,7 +31,7 @@ USE `be15_cr10_sedlaczek_biglibrary`;
 
 CREATE TABLE `media` (
   `id` int(11) NOT NULL,
-  `type` enum('Paperback','Hardcover','Audiobook','E-Book','E-Audio','CD','DVD','CD-ROM','Magazine') DEFAULT NULL,
+  `type` enum('Paperback','Hardcover','E-Book','E-Audio','Audiobook','CD','CD-ROM','DVD','Newspaper','Magazine') DEFAULT NULL,
   `ISBN` varchar(13) DEFAULT NULL,
   `title` varchar(50) DEFAULT NULL,
   `subtitle` varchar(50) DEFAULT NULL,
@@ -50,8 +50,8 @@ CREATE TABLE `media` (
   `narrator` varchar(50) DEFAULT NULL,
   `genre` set('Fiction','Children','Middle Grade','Young Adult','Fantasy','Adventure','Magic','Coming of Age','Asian','Folklore','Nonfiction','Psychology','Memoir','Animals','Self Help','Programming') DEFAULT NULL,
   `language` enum('English','French','German','Spanish','Irish') DEFAULT NULL,
-  `description` varchar(50) DEFAULT NULL,
-  `image` varchar(17) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `cover` varchar(20) DEFAULT NULL,
   `status` enum('Available','Borrowed','In Transit','Reserved','Missing') DEFAULT 'Available',
   `due_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -60,7 +60,7 @@ CREATE TABLE `media` (
 -- Dumping data for table `media`
 --
 
-INSERT INTO `media` (`id`, `type`, `ISBN`, `title`, `subtitle`, `series`, `part`, `author_first_name`, `author_last_name`, `publisher_name`, `publisher_city`, `edition_date`, `edition_year`, `publish_year`, `pages`, `length`, `version`, `narrator`, `genre`, `language`, `description`, `image`, `status`, `due_date`) VALUES
+INSERT INTO `media` (`id`, `type`, `ISBN`, `title`, `subtitle`, `series`, `part`, `author_first_name`, `author_last_name`, `publisher_name`, `publisher_city`, `edition_date`, `edition_year`, `publish_year`, `pages`, `length`, `version`, `narrator`, `genre`, `language`, `description`, `cover`, `status`, `due_date`) VALUES
 (1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Available', NULL),
 (2, 'E-Book', '9781781100219', 'Harry Potter and the Philosopher\'s Stone', NULL, 'Harry Potter', 1, 'Joanne K.', 'Rowling', 'Pottermore Publishing', 'London', '2015-12-08', 2015, 1997, 353, NULL, NULL, NULL, 'Fiction,Young Adult,Fantasy,Adventure,Magic,Coming of Age', 'English', NULL, '9781781100219.jpg', 'Available', NULL),
 (3, 'E-Book', '9781781100226', 'Harry Potter and the Chamber of Secrets', NULL, 'Harry Potter', 2, 'Joanne K.', 'Rowling', 'Pottermore Publishing', 'London', '2015-12-08', 2015, 1998, 357, NULL, NULL, NULL, 'Fiction,Young Adult,Fantasy,Adventure,Magic,Coming of Age', 'English', NULL, '9781781100226.jpg', 'Available', NULL),

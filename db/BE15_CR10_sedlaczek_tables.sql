@@ -2,7 +2,7 @@ DROP TABLE media;
 
 CREATE TABLE media (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  type ENUM ('Paperback','Hardcover','Audiobook','E-Book','E-Audio','CD','DVD','CD-ROM','Magazine'),
+  type ENUM ('Paperback','Hardcover','E-Book','E-Audio','Audiobook','CD','CD-ROM','DVD','Newspaper','Magazine'),
   ISBN VARCHAR(13),
   title VARCHAR(50),
   subtitle VARCHAR(50),
@@ -21,8 +21,37 @@ CREATE TABLE media (
   narrator VARCHAR(50),
   genre SET('Fiction','Children','Middle Grade','Young Adult','Fantasy','Adventure','Magic','Coming of Age','Asian','Folklore','Nonfiction','Psychology','Memoir','Animals','Self Help','Programming'),
   language ENUM('English','French','German','Spanish','Irish'),
-  description VARCHAR(50),
-  image VARCHAR(17),
+  description TEXT,
+  cover VARCHAR(20),
   status ENUM ('Available','Borrowed','In Transit','Reserved','Missing') DEFAULT 'Available',
   due_date DATE
 );
+
+INSERT INTO media 
+  (type, ISBN, title, subtitle, series, part, author_first_name, author_last_name, publisher_name, publisher_city, edition_date, edition_year, publish_year, pages, length, version, narrator, genre, language, cover)
+VALUES
+  (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL), 
+  ("E-Book", 9781781100219, "Harry Potter and the Philosopher's Stone", NULL, "Harry Potter", 1, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-12-08", 2015, 1997, 353, NULL, NULL, NULL, 'Fiction,Young Adult,Fantasy,Adventure,Magic,Coming of Age', "English", "9781781100219.jpg"), 
+  ("E-Book", 9781781100226, "Harry Potter and the Chamber of Secrets", NULL, "Harry Potter", 2, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-12-08", 2015, 1998, 357, NULL, NULL, NULL, 'Fiction,Young Adult,Fantasy,Adventure,Magic,Coming of Age', "English", "9781781100226.jpg"), 
+  ("E-Book", 9781781100233, "Harry Potter and the Prisoner of Azkaban", NULL, "Harry Potter", 3, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-12-08", 2015, 1999, 435, NULL, NULL, NULL, "Fiction,Young Adult,Fantasy,Magic,Adventure,Coming of Age", "English", "9781781100233.jpg"), 
+  ("E-Book", 9781781105672, "Harry Potter and the Goblet of Fire", NULL, "Harry Potter", 4, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-12-08", 2015, 2000, 734, NULL, NULL, NULL, "Fiction,Young Adult,Fantasy,Magic,Adventure,Coming of Age", "English", "9781781105672.jpg"), 
+  ("E-Book", 9781781100240, "Harry Potter and the Order of the Phoenix", NULL, "Harry Potter", 5, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-12-08", 2015, 2003, 901, NULL, NULL, NULL, "Fiction,Young Adult,Fantasy,Magic,Adventure,Coming of Age", "English", "9781781100240.jpg"), 
+  ("E-Book", 9781781100257, "Harry Potter and the Half-Blood Prince", NULL, "Harry Potter", 6, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-12-08", 2015, 2005, 672, NULL, NULL, NULL, "Fiction,Young Adult,Fantasy,Magic,Adventure,Coming of Age", "English", "9781781100257.jpg"), 
+  ("E-Book", 9781781100264, "Harry Potter and the Deathly Hallows", NULL, "Harry Potter", 7, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-12-08", 2015, 2007, 784, NULL, NULL, NULL, "Fiction,Young Adult,Fantasy,Magic,Adventure,Coming of Age", "English", "9781781100264.jpg"), 
+  ("Audiobook", 9781781102367, "Harry Potter and the Philosopher's Stone", NULL, "Harry Potter", 1, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-11-20", 2015, 1997, NULL, "09:33", "Unabridged", "Stephen Fry", "Fiction,Young Adult,Fantasy,Magic,Adventure,Coming of Age", "English", "9781781102367.jpg"), 
+  ("Audiobook", 9781781102374, "Harry Potter and the Chamber of Secrets", NULL, "Harry Potter", 2, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-11-20", 2015, 1998, NULL, "11:05", "Unabridged", "Stephen Fry", "Fiction,Young Adult,Fantasy,Magic,Adventure,Coming of Age", "English", "9781781102374.jpg"), 
+  ("Audiobook", 9781781102381, "Harry Potter and the Prisoner of Azkaban", NULL, "Harry Potter", 3, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-11-20", 2015, 1999, NULL, "13:10", "Unabridged", "Stephen Fry", "Fiction,Young Adult,Fantasy,Magic,Adventure,Coming of Age", "English", "9781781102381.jpg"), 
+  ("Audiobook", 9781781102398, "Harry Potter and the Goblet of Fire", NULL, "Harry Potter", 4, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-11-20", 2015, 2000, NULL, "22:17", "Unabridged", "Stephen Fry", "Fiction,Young Adult,Fantasy,Magic,Adventure,Coming of Age", "English", "9781781102398.jpg"), 
+  ("Audiobook", 9781781102404, "Harry Potter and the Order of the Phoenix", NULL, "Harry Potter", 5, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-11-20", 2015, 2003, NULL, "30:18", "Unabridged", "Stephen Fry", "Fiction,Young Adult,Fantasy,Magic,Adventure,Coming of Age", "English", "9781781102404.jpg"), 
+  ("Audiobook", 9781781102411, "Harry Potter and the Half-Blood Prince", NULL, "Harry Potter", 6, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-11-20", 2015, 2005, NULL, "21:27", "Unabridged", "Stephen Fry", "Fiction,Young Adult,Fantasy,Magic,Adventure,Coming of Age", "English", "9781781102411.jpg"), 
+  ("Audiobook", 9781781102428, "Harry Potter and the Deathly Hallows", NULL, "Harry Potter", 7, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-11-20", 2015, 2007, NULL, "24:00", "Unabridged", "Stephen Fry", "Fiction,Young Adult,Fantasy,Magic,Adventure,Coming of Age", "English", "9781781102428.jpg"), 
+  ("E-Book", 9780316052603, "Where the Mountain Meets the Moon", NULL, "Moon Trilogy", 1, "Grace", "Lin", "Little, Brown Books for Young Readers", "New York", "2009-07-01", 2009, 2009, 288, NULL, NULL, NULL, "Fiction,Middle Grade,Fantasy,Magic,Adventure,Asian,Folklore", "English", "9780316052603.jpg"), 
+  ("E-Book", 9780316215534, "Starry River of the Sky", NULL, "Moon Trilogy", 2, "Grace", "Lin", "Little, Brown Books for Young Readers", "New York", "2012-10-02", 2012, 2012, 304, NULL, NULL, NULL, "Fiction,Middle Grade,Fantasy,Magic,Adventure,Asian,Folklore", "English", "9780316215534.jpg"), 
+  ("E-Book", 9780316317696, "When the Sea Turned to Silver", NULL, "Moon Trilogy", 3, "Grace", "Lin", "Little, Brown Books for Young Readers", "New York", "2016-10-04", 2016, 2016, 368, NULL, NULL, NULL, "Fiction,Middle Grade,Fantasy,Magic,Adventure,Asian,Folklore", "English", "9780316317696.jpg"), 
+  ("Paperback", 9780316038638, "Where the Mountain Meets the Moon", NULL, "Moon Trilogy", 1, "Grace", "Lin", "Little, Brown Books for Young Readers", "New York", "2012-04-12", 2012, 2009, 320, NULL, NULL, NULL, "Fiction,Middle Grade,Fantasy,Magic,Adventure,Asian,Folklore", "English", "9780316038638.jpg"), 
+  ("Paperback", 9780316125970, "Starry River of the Sky", NULL, "Moon Trilogy", 2, "Grace", "Lin", "Little, Brown Books for Young Readers", "New York", "2014-02-11", 2014, 2012, 320, NULL, NULL, NULL, "Fiction,Middle Grade,Fantasy,Magic,Adventure,Asian,Folklore", "English", "9780316125970.jpg"), 
+  ("Paperback", 9780316125949, "When the Sea Turned to Silver", NULL, "Moon Trilogy", 3, "Grace", "Lin", "Little, Brown Books for Young Readers", "New York", "2017-09-05", 2017, 2016, 400, NULL, NULL, NULL, "Fiction,Middle Grade,Fantasy,Magic,Adventure,Asian,Folklore", "English", "9780316125949.jpg"), 
+  ("Audiobook", 9781549187247, "Where the Mountain Meets the Moon", NULL, "Moon Trilogy", 1, "Grace", "Lin", "Hachette Audio", "New York", "2020-06-16", 2020, 2009, NULL, "04:58", "Unabridged", "Janet Song", "Fiction,Middle Grade,Fantasy,Magic,Adventure,Asian,Folklore", "English", "9781549187247.jpg"), 
+  ("Audiobook", 9781619691476, "Starry River of the Sky", NULL, "Moon Trilogy", 2, "Grace", "Lin", "Hachette Audio", "New York", "2012-10-02", 2012, 2012, NULL, "05:25", "Unabridged", "Kim Mai Guest", "Fiction,Middle Grade,Fantasy,Magic,Adventure,Asian,Folklore", "English", "9781619691476.jpg"), 
+  ("Audiobook", 9781478912545, "When the Sea Turned to Silver", NULL, "Moon Trilogy", 3, "Grace", "Lin", "Hachette Audio", "New York", "2016-10-04", 2016, 2016, NULL, "07:37", "Unabridged", "Kim Mai Guest", "Fiction,Middle Grade,Fantasy,Magic,Adventure,Asian,Folklore", "English", "9781478912545.jpg"), 
+  ("Paperback", 9780956868480, "Iron Knights", "Putting the Evil back into Medieval", NULL, NULL, "Robin", "Bennett", "Monster Books", "Henley-on-Thames", "2020-10-01", 2020, 2013, 230, NULL, NULL, NULL, "Fiction,Middle Grade,Fantasy,Magic,Adventure,Coming of Age", "English", "9780956868480.jpg");

@@ -1,7 +1,7 @@
--- id, type, ISBN, title, subtitle, series, part, author_first_name, author_last_name, publisher_name, publisher_city, edition_date, edition_year, publish_year, pages, length, version, narrator, genre, language, description, image, status, due_date
+-- id, type, ISBN, title, subtitle, series, part, author_first_name, author_last_name, publisher_name, publisher_city, edition_date, edition_year, publish_year, pages, length, version, narrator, genre, language, description, cover, status, due_date
 
 INSERT INTO media 
-  (type, ISBN, title, subtitle, series, part, author_first_name, author_last_name, publisher_name, publisher_city, edition_date, edition_year, publish_year, pages, length, version, narrator, genre, language, image)
+  (type, ISBN, title, subtitle, series, part, author_first_name, author_last_name, publisher_name, publisher_city, edition_date, edition_year, publish_year, pages, length, version, narrator, genre, language, cover)
 VALUES
   (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL), 
   ("E-Book", 9781781100219, "Harry Potter and the Philosopher's Stone", NULL, "Harry Potter", 1, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-12-08", 2015, 1997, 353, NULL, NULL, NULL, 'Fiction,Young Adult,Fantasy,Adventure,Magic,Coming of Age', "English", "9781781100219.jpg"), 
