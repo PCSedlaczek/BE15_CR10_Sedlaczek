@@ -36,7 +36,7 @@ Big Library web application
 - [x] Delete button for deleting media from database
 
 ## Bonus
-- [*] Show media button to display details on new page
+- [x] Show media button to display details on new page
 - [ ] List of publishers & related Media
 
 ## Extend
@@ -48,6 +48,6 @@ Big Library web application
 - [x] Format documents in Visual Studio Code
 - [*] Push files to GitHub repository
 - [x] Send repository link through LMS
-- [ ] Invite codefactorygit as collaborator
+- [x] Invite codefactorygit as collaborator
 
-Work time: 17:00 hrs
+Work time: 17:50 hrs
