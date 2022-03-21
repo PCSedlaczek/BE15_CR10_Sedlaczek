@@ -29,20 +29,25 @@ Big Library web application
 - [x] Add test data (at least 10 entries)
 
 ## PHP CRUD
-- [ ] Fetch & Display List of Media from database
-- [ ] User-Friendly GUI (Bootstrap/HTML/CSS/JavaScript)
-- [ ] Insert form for inserting media into database
-- [ ] Update form for updating media in database
-- [ ] Delete button for deleting media from database
+- [x] Fetch & Display List of Media from database
+- [x] User-Friendly GUI (Bootstrap/HTML/CSS/JavaScript)
+- [x] Insert form for inserting media into database
+- [x] Update form for updating media in database
+- [x] Delete button for deleting media from database
 
 ## Bonus
-- [ ] Show media button to display details on new page
+- [*] Show media button to display details on new page
 - [ ] List of publishers & related Media
 
+## Extend
+- [ ] List of authors & related Media
+- [ ] List of media types & related Media
+- [ ] List of genres & related Media
+
 ## Finalize
-- [ ] Format documents in Visual Studio Code
-- [ ] Push files to GitHub repository
-- [ ] Send repository link through LMS
+- [x] Format documents in Visual Studio Code
+- [*] Push files to GitHub repository
+- [x] Send repository link through LMS
 - [ ] Invite codefactorygit as collaborator
 
-Work time: 10:33 hrs
+Work time: 17:00 hrs
