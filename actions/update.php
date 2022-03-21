@@ -3,20 +3,60 @@ require_once "connect.php";
 require_once "upload.php";
 
 if ($_POST) {
+  $type = $_POST["type"];
+  $isbn = $_POST["isbn"];
   $title = $_POST["title"];
   $subtitle = $_POST["subtitle"];
+  $series = $_POST["series"];
+  $part = $_POST["part"];
+  $author_first_name = $_POST["author_first_name"];
+  $author_last_name = $_POST["author_last_name"];
+  $publisher_name = $_POST["publisher_name"];
+  $publisher_city = $_POST["publisher_city"];
+  $edition_date = $_POST["edition_date"];
+  $edition_year = $_POST["edition_year"];
+  $publish_year = $_POST["publish_year"];
+  $pages = $_POST["pages"];
+  $length = $_POST["length"];
+  $version = $_POST["version"];
+  $narrator = $_POST["narrator"];
+  $genre = $_POST["genre"];
+  $language = $_POST["language"];
+  $description = $_POST["description"];
   $cover = $_POST["cover"];
   $id = $_POST["id"];
-  //variable for upload cover errors is initialised
+
+  // initialise variable for cover upload errors
   $uploadError = "";
 
   $cover = upload($_FILES["cover"]);
+  $values = "
+    type = '$type',
+    isbn = '$isbn',
+    title = '$title',
+    subtitle = '$subtitle',
+    series = '$series',
+    part = $part,
+    author_first_name = '$author_first_name',
+    author_last_name = '$author_last_name',
+    publisher_name = '$publisher_name',
+    publisher_city = '$publisher_city',
+    edition_date = '$edition_date',
+    edition_year = $edition_year,
+    publish_year = $publish_year,
+    pages = $pages,
+    length = '$length',
+    version = '$version',
+    narrator = '$narrator',
+    genre = '$genre',
+    language = '$language',
+    description = '$description'";
 
   if ($cover->error === 0) {
     ($_POST["cover"] == "cover.png") ?: unlink("../img/$_POST[cover]");
-    $sql = "UPDATE media SET title = '$title', subtitle = $subtitle, cover = '$cover->fileName' WHERE id = $id";
+    $sql = "UPDATE media SET $values, cover = '$cover->fileName' WHERE id = $id";
   } else {
-    $sql = "UPDATE media SET title = '$title', subtitle = '$subtitle' WHERE id = $id";
+    $sql = "UPDATE media SET $values WHERE id = $id";
   }
   if (mysqli_query($connect, $sql) === TRUE) {
     $class = "success";
