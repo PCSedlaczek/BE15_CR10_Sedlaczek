@@ -2,7 +2,7 @@ DROP TABLE media;
 
 CREATE TABLE media (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  type ENUM ('Paperback', 'Hardcover', 'Audiobook', 'eBook', 'eAudio', 'CD', 'DVD', 'CD-ROM', 'Magazine'),
+  type ENUM ('Paperback','Hardcover','Audiobook','E-Book','E-Audio','CD','DVD','CD-ROM','Magazine'),
   ISBN VARCHAR(13),
   title VARCHAR(50),
   subtitle VARCHAR(50),
@@ -17,12 +17,12 @@ CREATE TABLE media (
   publish_year YEAR,
   pages INT(6),
   length TIME,
-  version ENUM('Unabridged', 'Abridged', 'Adapted'),
+  version ENUM('Unabridged','Abridged','Adapted'),
   narrator VARCHAR(50),
-  genre SET('Fiction', 'Children', 'Middle Grade', 'Young Adult', 'Fantasy', 'Adventure', 'Magic', 'Coming of Age', 'Asian', 'Folklore', 'Nonfiction', 'Psychology', 'Memoir', 'Animals', 'Self Help', 'Programming'),
+  genre SET('Fiction','Children','Middle Grade','Young Adult','Fantasy','Adventure','Magic','Coming of Age','Asian','Folklore','Nonfiction','Psychology','Memoir','Animals','Self Help','Programming'),
   language ENUM('English','French','German','Spanish','Irish'),
   description VARCHAR(50),
   image VARCHAR(17),
-  status ENUM ('Available', 'Borrowed', 'In Transit', 'Reserved', 'Missing') DEFAULT 'Available',
+  status ENUM ('Available','Borrowed','In Transit','Reserved','Missing') DEFAULT 'Available',
   due_date DATE
 );
