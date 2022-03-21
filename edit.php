@@ -9,7 +9,7 @@ if ($_GET["id"]) {
   if (mysqli_num_rows($result) == 1) {
     $media = mysqli_fetch_assoc($result);
     $type = $media["type"];
-    $isbn = $media["isbn"];
+    $ISBN = $media["ISBN"];
     $title = $media["title"];
     $subtitle = $media["subtitle"];
     $series = $media["series"];
@@ -77,8 +77,8 @@ if ($_GET["id"]) {
 
           <tr>
             <th>Title</th>
-            <td><input class="form-control bg-dark" name="title" placeholder="Title" value="<?= $title ?>" /></td>
-            <td><input class="form-control bg-dark" name="subtitle" placeholder="Subtitle" value="<?= $subtitle ?>" /></td>
+            <td><input class="form-control bg-dark" name="title" placeholder="Title" value="<?= $title ?>" />
+            <input class="form-control bg-dark mt-2" name="subtitle" placeholder="Subtitle" value="<?= $subtitle ?>" /></td>
           </tr>
 
           <tr>
@@ -182,7 +182,7 @@ if ($_GET["id"]) {
           <tr>
             <th>ISBN</th>
             <td>
-              <input class="form-control bg-dark" name="isbn" placeholder="ISBN number" value="<?= $isbn ?>" />
+              <input class="form-control bg-dark" name="ISBN" placeholder="ISBN number" value="<?=$ISBN?>" />
             </td>
           </tr>
 

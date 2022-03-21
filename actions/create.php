@@ -4,7 +4,7 @@ require_once "upload.php";
 
 if ($_POST) {
   $type = $_POST["type"];
-  $isbn = $_POST["isbn"];
+  $ISBN = $_POST["ISBN"];
   $title = $_POST["title"];
   $subtitle = $_POST["subtitle"];
   $series = $_POST["series"];
@@ -32,7 +32,7 @@ if ($_POST) {
   $cover = upload($_FILES["cover"]);
   $values = "
     type = '$type',
-    isbn = '$isbn',
+    ISBN = '$ISBN',
     title = '$title',
     subtitle = '$subtitle',
     series = '$series',
