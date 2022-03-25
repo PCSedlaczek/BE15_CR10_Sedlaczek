@@ -3,7 +3,6 @@
 INSERT INTO media 
   (type, ISBN, title, subtitle, series, part, author_first_name, author_last_name, publisher_name, publisher_city, edition_date, edition_year, publish_year, pages, length, version, narrator, genre, language, cover)
 VALUES
-  (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL), 
   ("E-Book", 9781781100219, "Harry Potter and the Philosopher's Stone", NULL, "Harry Potter", 1, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-12-08", 2015, 1997, 353, NULL, NULL, NULL, 'Fiction,Young Adult,Fantasy,Adventure,Magic,Coming of Age', "English", "9781781100219.jpg"), 
   ("E-Book", 9781781100226, "Harry Potter and the Chamber of Secrets", NULL, "Harry Potter", 2, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-12-08", 2015, 1998, 357, NULL, NULL, NULL, 'Fiction,Young Adult,Fantasy,Adventure,Magic,Coming of Age', "English", "9781781100226.jpg"), 
   ("E-Book", 9781781100233, "Harry Potter and the Prisoner of Azkaban", NULL, "Harry Potter", 3, "Joanne K.", "Rowling", "Pottermore Publishing", "London", "2015-12-08", 2015, 1999, 435, NULL, NULL, NULL, "Fiction,Young Adult,Fantasy,Magic,Adventure,Coming of Age", "English", "9781781100233.jpg"), 
