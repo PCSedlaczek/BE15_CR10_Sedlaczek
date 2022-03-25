@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,15 +10,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add Media</title>
-  <link rel="stylesheet" href="css/style.css">
-  <?php require_once "components/bootstrap.php" ?>
+  <link rel="stylesheet" href="../css/style.css">
+  <?php require_once "../components/bootstrap.php" ?>
 </head>
 
 <body class="bg-dark">
   <div class="container my-5">
     <fieldset class="mx-auto">
       <legend class="h2 text-white">Add Media</legend>
-      <form action="actions/create.php" method="post" enctype="multipart/form-data">
+      <form action="../actions/create.php" method="post" enctype="multipart/form-data">
         <table class="table table-dark text-white">
 
           <tr>
@@ -81,7 +85,7 @@
           <tr>
             <th>Audio</th>
             <td>
-              <input class="form-control bg-dark" name="length" placeholder="Length"/>
+              <input class="form-control bg-dark" name="length" placeholder="Length" value=""/>
               <select class="form-select bg-dark my-2 text-white" name="version" aria-label="Version"> 
                 <option selected>Version</option>
                 <option value="Unabridged">Unabridged</option>
@@ -95,7 +99,7 @@
           <tr>
             <th>Language</th>
             <td>
-              <select class="form-select bg-dark my-2 text-white" name="version" aria-label="Version"> 
+              <select class="form-select bg-dark my-2 text-white" name="language" aria-label="Language"> 
                 <option selected>Language</option>
                 <option value="English">English</option>
                 <option value="French">French</option>
@@ -109,8 +113,7 @@
           <tr>
             <th>Description</th>
             <td>
-              <textarea class="form-control bg-dark" style="height:250px" name="description" placeholder="Description">
-              </textarea>
+              <textarea class="form-control bg-dark" style="height:250px" name="description" placeholder="Description"></textarea>
             </td>
           </tr>
 
@@ -140,7 +143,7 @@
 
           <tr>
             <th>ISBN</th>
-            <td><input class="form-control bg-dark" name="isbn" placeholder="ISBN number"/></td>
+            <td><input class="form-control bg-dark" name="ISBN" placeholder="ISBN number"/></td>
           </tr>
 
           <tr>
@@ -150,7 +153,7 @@
 
           <tr>
             <td><button class="btn btn-success" type="submit">Add</button></td>
-            <td><a href="index.php"><button class="btn btn-warning" type="button">Back</button></a>
+            <td><a href="../index.php"><button class="btn btn-warning" type="button">Back</button></a>
             </td>
           </tr>
 

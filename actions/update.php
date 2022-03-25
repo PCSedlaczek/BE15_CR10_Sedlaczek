@@ -20,16 +20,22 @@ if ($_POST) {
   $length = $_POST["length"];
   $version = $_POST["version"];
   $narrator = $_POST["narrator"];
+  
   $genre = $_POST["genre"];
+  if ($genre > 0) {
+    $genre = implode(", ", $_POST["genre"]);
+  }
+  // echo $genres;
+
   $language = $_POST["language"];
   $description = $_POST["description"];
-  $cover = $_POST["cover"];
+
+  $cover = upload($_FILES["cover"]);
   $id = $_POST["id"];
 
   // initialise variable for cover upload errors
   $uploadError = "";
 
-  $cover = upload($_FILES["cover"]);
   $values = "
     type = '$type',
     ISBN = '$ISBN',
@@ -91,7 +97,7 @@ if ($_POST) {
     <div class="alert alert-<?=$class?>" role="alert">
       <p><?=($message) ?? ""?></p>
       <p><?=($uploadError) ?? ""?></p>
-      <a href="../update.php?id=<?=$id?>"><button class="btn btn-warning" type='button'>Back</button></a>
+      <a href="../edit.php?id=<?=$id?>"><button class="btn btn-warning" type='button'>Back</button></a>
       <a href="../index.php"><button class="btn btn-success" type="button">Home</button></a>
     </div>
   </div>

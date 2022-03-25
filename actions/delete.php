@@ -6,7 +6,7 @@ if ($_POST) {
   $cover = $_POST["cover"];
   ($cover == "cover.png") ?: unlink("../img/$cover");
 
-  $sql = "DELETE FROM media WHERE id = {$id}";
+  $sql = "DELETE FROM media WHERE id = $id";
   if (mysqli_query($connect, $sql) === TRUE) {
     $class = "success";
     $message = "Successfully Deleted!";
@@ -27,11 +27,12 @@ if ($_POST) {
 <head>
   <meta charset="UTF-8">
   <title>Delete</title>
+  <link rel="stylesheet" href="../css/style.css">
   <?php require_once "../components/bootstrap.php"?>
 </head>
 
-<body>
-  <div class="container">
+<body class="bg-dark text-white">
+  <div class="container my-4 w-75">
     <div class="mt-3 mb-3">
       <h1>Delete request response</h1>
     </div>

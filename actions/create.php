@@ -20,38 +20,17 @@ if ($_POST) {
   $length = $_POST["length"];
   $version = $_POST["version"];
   $narrator = $_POST["narrator"];
-  $genre = $_POST["genre"];
+  $genres = $_POST["genre"];
+  $genre = implode(", ", $genres);
+  // echo $genre;
   $language = $_POST["language"];
+  // echo $language;
   $description = $_POST["description"];
-  $cover = $_POST["cover"];
-  $id = $_POST["id"];
 
   // initialise variable for cover upload errors
   $uploadError = "";
 
   $cover = upload($_FILES["cover"]);
-  $values = "
-    type = '$type',
-    ISBN = '$ISBN',
-    title = '$title',
-    subtitle = '$subtitle',
-    series = '$series',
-    part = $part,
-    author_first_name = '$author_first_name',
-    author_last_name = '$author_last_name',
-    publisher_name = '$publisher_name',
-    publisher_city = '$publisher_city',
-    edition_date = '$edition_date',
-    edition_year = $edition_year,
-    publish_year = $publish_year,
-    pages = $pages,
-    length = '$length',
-    version = '$version',
-    narrator = '$narrator',
-    genre = '$genre',
-    language = '$language',
-    description = '$description'";
-
   
   $uploadError = "";
 
@@ -65,30 +44,26 @@ if ($_POST) {
   if (mysqli_query($connect, $sql) === true) {
     $class = "success";
     $message = "The entry below was successfully created <br>
-      <table class='table w-50'>
-        <tr>
-          <td>$type</td>
-          <td>$ISBN</td>
-          <td>$title</td>
-          <td>$subtitle</td>
-          <td>$series</td>
-          <td>$part</td>
-          <td>$author_first_name</td>
-          <td>$author_last_name</td>
-          <td>$publisher_name</td>
-          <td>$publisher_city</td>
-          <td>$edition_date</td>
-          <td>$edition_year</td>
-          <td>$publish_year</td>
-          <td>$pages</td>
-          <td>$length</td>
-          <td>$version</td>
-          <td>$narrator</td>
-          <td>$genre</td>
-          <td>$language</td>
-          <td>$description</td>
-        </tr>
-      </table>
+      <p>$type</p>
+      <p>$ISBN</p>
+      <p>$title</p>
+      <p>$subtitle</p>
+      <p>$series</p>
+      <p>$part</p>
+      <p>$author_first_name</p>
+      <p>$author_last_name</p>
+      <p>$publisher_name</p>
+      <p>$publisher_city</p>
+      <p>$edition_date</p>
+      <p>$edition_year</p>
+      <p>$publish_year</p>
+      <p>$pages</p>
+      <p>$length</p>
+      <p>$version</p>
+      <p>$narrator</p>
+      <p>$genre</p>
+      <p>$language</p>
+      <p>$description</p>
       <hr>";
     $uploadError = ($cover->error != 0) ? $cover->ErrorMessage : "";
   } else {
@@ -116,9 +91,9 @@ if ($_POST) {
     <div class="mt-3 mb-3">
       <h1>Create request response</h1>
     </div>
-    <div class="alert alert-<?= $class; ?>" role="alert">
-      <p><?php echo ($message) ?? ""; ?></p>
-      <p><?php echo ($uploadError) ?? ""; ?></p>
+    <div class="alert alert-<?= $class ?>" role="alert">
+      <p><?= ($message) ?? ""; ?></p>
+      <p><?= ($uploadError) ?? "" ?></p>
       <a href="../index.php"><button class="btn btn-primary" type="button">Home</button></a>
     </div>
   </div>
