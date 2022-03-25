@@ -37,12 +37,18 @@ Big Library web application
 
 ## Bonus
 - [x] Show media button to display details on new page
-- [ ] List of publishers & related Media
+- [x] List of publishers & related Media
 
 ## Extend
-- [ ] List of authors & related Media
-- [ ] List of media types & related Media
-- [ ] List of genres & related Media
+- [x] List of authors & related Media
+- [x] List of media types & related Media
+- [x] List of genres & related Media
+- [x] List of series & related Media
+- [x] List of parts & related Media
+- [x] List of edition years & related Media
+- [x] List of publication years & related Media
+- [x] List of audio versions & related Media
+- [x] List of narrators & related Media
 
 ## Finalize
 - [x] Format documents in Visual Studio Code
@@ -50,4 +56,4 @@ Big Library web application
 - [x] Send repository link through LMS
 - [x] Invite codefactorygit as collaborator
 
-Work time: 17:50 hrs
+Work time: 35:00 hrs
