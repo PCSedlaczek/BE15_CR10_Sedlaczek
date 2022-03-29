@@ -52,7 +52,7 @@ Big Library web application
 
 ## Finalize
 - [x] Format documents in Visual Studio Code
-- [*] Push files to GitHub repository
+- [x] Push files to GitHub repository
 - [x] Send repository link through LMS
 - [x] Invite codefactorygit as collaborator
 
