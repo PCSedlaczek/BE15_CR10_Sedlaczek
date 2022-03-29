@@ -215,7 +215,7 @@ if ($_GET["id"]) {
 
             <input type="hidden" name="cover" value="<?= $media['cover'] ?>" />
             <td><button class="btn btn-success" type="submit">Update</button></td>
-            <td><a href="index.php"><button class="btn btn-warning" type="button">Back</button></a></td>
+            <td><a href="../index.php"><button class="btn btn-warning" type="button">Back</button></a></td>
           </tr>
         </table>
       </form>

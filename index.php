@@ -24,10 +24,7 @@ if (
     $title = "Type: $type";
   }
   // Filter by author
-  else if (
-    isset($_GET["author_fname"]) &&
-    isset($_GET["author_lname"])
-  ) {
+  else if (isset($_GET["author_fname"], $_GET["author_lname"])) {
     $author_fname = $_GET["author_fname"];
     $author_lname = $_GET["author_lname"];
     $filter = "author_first_name = '$author_fname' AND author_last_name = '$author_lname'";
@@ -106,7 +103,7 @@ else {
 $result = mysqli_query($connect, $query);
 $media = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-// Create tbody for query results
+// Create table body for query results
 if (mysqli_num_rows($result) > 0) {
   $tbody = "";
 
@@ -136,8 +133,7 @@ if (mysqli_num_rows($result) > 0) {
           </a>
           <a href='index.php?edition_year=$entry[edition_year]' class='link-light'>
             $entry[edition_year]
-          </a><br>
-          <a href='index.php?status=$entry[status]'>
+          </a>
         </p>
         <p>
           <a href='index.php?series=$entry[series]' class='link-light'>
